@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ItemService } from '../item/item.service';
 import { Observable, of } from 'rxjs';
 import { Items } from 'src/app/models/items';
 import { Item } from 'src/app/models/item';
@@ -7,10 +6,10 @@ import { Item } from 'src/app/models/item';
 import * as range from 'lodash.range';
 
 @Injectable()
-export class MockService extends ItemService {
+export class MockService  {
 
   constructor() {
-    super();
+   
   }
 
   load(offset?: number, limit?: number) : Observable<Items> {

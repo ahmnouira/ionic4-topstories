@@ -1,6 +1,6 @@
 # ionic4-topstories
 
-Top Stories application using _Ionic 4_ framework.
+This is **Top Stories** application developed using  _Ionic 4_ framework along with Angular, resource data comming from [Hacker News API](https://github.com/HackerNews/API) public firebase realtime database. 
 
 ## Overview 
 

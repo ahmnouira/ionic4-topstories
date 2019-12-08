@@ -10,6 +10,12 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ServicesModule } from './services/services.module';
 
+
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -18,7 +24,8 @@ import { ServicesModule } from './services/services.module';
     IonicModule.forRoot(),
     AppRoutingModule,
     ServicesModule,
-   
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
   ],
   providers: [
     StatusBar,

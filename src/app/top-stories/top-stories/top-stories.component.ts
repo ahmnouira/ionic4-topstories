@@ -1,8 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Items } from 'src/app/models/items';
-import { Subscription } from 'rxjs';
+import { Subscription, Observable } from 'rxjs';
 import { ItemService } from 'src/app/services/item/item.service';
-import { MockService } from 'src/app/services/mock/mock.service';
 import { Item } from 'src/app/models/item';
 
 @Component({
@@ -16,13 +14,20 @@ export class TopStoriesComponent implements OnInit, OnDestroy {
 
   private subscription : Subscription;
 
-  constructor(private itemService: MockService) { }
+  constructor(private itemService : ItemService) {
+    /*  this.db.list('/v0/newstories').valueChanges().subscribe(data  => {
+        this.items = data;
+        console.log(data);
+      })*/
 
-  ngOnInit() {
-
-    this.subscription = this.itemService.load(0, 10).subscribe(items => this.items = items.results); 
-    console.log("items:", this.items);
   }
+  ngOnInit() {
+    this.subscription = this.itemService.load(0, 10).subscribe(items => {
+     console.log("Hacker News API", items); 
+     this.items = items.results;
+  });
+
+}
 
   ngOnDestroy() {
 
