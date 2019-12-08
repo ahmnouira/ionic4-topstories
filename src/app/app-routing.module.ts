@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  // to-stories is the index page 
+  { path: '', redirectTo: 'top-stories', pathMatch: 'full' }, 
+  { path: 'top-stories', loadChildren: './top-stories/top-stories.module#TopStoriesModule'},
+  { path: '**', redirectTo: ''}
 ];
 
 @NgModule({

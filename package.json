@@ -1,8 +1,13 @@
 {
-  "name": "list-stories",
+  "name": "top-stories",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "Ahmed Nouira",
   "homepage": "https://ionicframework.com/",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -24,6 +29,8 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.7.1",
     "core-js": "^2.5.4",
+    "lodash.range": "^3.2.0",
+    "moment": "^2.24.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
@@ -54,5 +61,5 @@
     "tslint": "~5.15.0",
     "typescript": "~3.4.3"
   },
-  "description": "An Ionic project"
+  "description": "Top Stories Ionic Mobile Application"
 }
