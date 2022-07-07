@@ -33,7 +33,7 @@
     "core-js": "^3.4.7",
     "firebase": "^7.5.2",
     "lodash.range": "^3.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "rxjs": "~6.5.3",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
